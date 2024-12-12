@@ -1,0 +1,67 @@
+@font-face {
+	font-family: "Tektur";
+	font-style: normal;
+	font-weight: 400 900;
+	font-stretch: 100%;
+	src: url(./fonts/Tektur-Regular.ttf) format('woff2');
+}
+
+@font-face {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400 900;
+	font-stretch: 100%;
+	src: url(./fonts/Inter18-Regular.ttf) format('woff2');
+}
+
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	color: var(--foreground);
+	background: #ffffff;
+	font-family: "Tektur", Arial, Helvetica, sans-serif;
+}
+.swiper-3d .swiper-wrapper {
+	height: 0;
+}
+.swiperMenu .swiper-slide-active > .swiperSlide {
+	background-color: #fff;
+	padding: 2px;
+	width: 100%;
+	clip-path: polygon(0% 0%, 95% 0%, 100% 30%, 100% 100%, 5% 100%, 0 70%);
+}
+.swiperMenu .swiper-slide-active > .swiperSlide .slideInfo p{
+	opacity: 1;
+}
+.defaultSwiperMenu .swiper-slide-active .slideInfo{
+	background-color: #cddee3;
+}
+.purpleSwiperMenu .swiper-slide-active .slideInfo{
+	background-color: #d4d1dc;
+}
+.yellowSwiperMenu .swiper-slide-active .slideInfo{
+	background-color: #dae3d5;
+}
+.swiper-slide .slideInfo p{
+	opacity: 0.4;
+}

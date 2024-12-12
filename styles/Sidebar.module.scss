@@ -1,0 +1,58 @@
+.container {
+	display: none;
+
+	.menuButton {
+		position: absolute;
+		z-index: 1;
+		top: 45px;
+		right: 40px;
+		cursor: pointer;
+		display: block;
+		border: unset;
+		padding: unset;
+		background: unset;
+	}
+
+	.sidebarBox {
+		top: 0;
+		position: fixed;
+		right: -100%;
+		background-color: #ffffff;
+		height: 100vh;
+		width: 90%;
+		transition: right 0.3s ease-in-out;
+		z-index: 1000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.closeButton {
+			position: absolute;
+			top: 20px;
+			right: 35px;
+			width: 17px;
+			height: 17px;
+			cursor: pointer;
+			border: unset;
+			background: unset;
+		}
+
+		&.open {
+			right: 0;
+		}
+
+		.menuContainer {
+			height: 310px;
+		}
+	}
+}
+
+.hidden {
+	display: none !important;
+}
+
+@media (max-width: 768px) {
+	.container {
+		display: block;
+	}
+}

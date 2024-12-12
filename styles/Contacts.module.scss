@@ -1,0 +1,186 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	min-height: calc(100vh - 40px);
+
+	.mainBox {
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: row;
+		gap: 10px;
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		flex-grow: 1;
+	}
+
+	.figure {
+		width: 100%;
+		height: 100%;
+	}
+
+	.mobileFigure {
+		display: none;
+	}
+
+	.leftColumn {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.infoBox {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		gap: 25px;
+
+		.contactItem {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+			padding: 10px 0;
+			max-width: 300px;
+
+			.contactText {
+				font-family: "Tektur";
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 32px;
+				color: #154359;
+				text-align: center;
+			}
+
+			.contactImage {
+				width: 27px;
+				height: 27px;
+			}
+
+			.mailImage {
+				width: 27px;
+				height: 21px;
+			}
+
+			.mapImage {
+				width: 21px;
+				height: 27px;
+			}
+		}
+	}
+
+	.rightColumn {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		.rightColumnContainer {
+			margin-top: 50px;
+			height: 50%;
+			width: 100%;
+		}
+	}
+
+	.footer {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-around;
+		padding: 20px;
+
+		.footerItem {
+			.footerText {
+				font-family: "Inter";
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 25px;
+				color: #154359;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.container {
+		align-items: center;
+
+		.mainBox {
+			display: flex;
+			justify-content: unset;
+			flex-direction: column;
+			height: 100%;
+			margin-top: 30px;
+			padding: unset;
+			gap: 0;
+		}
+
+		.mobileFigure {
+			display: block;
+			width: 100%;
+			height: 250px;
+			min-height: 250px;
+		}
+
+		.leftColumn,
+		.rightColumn {
+			display: none;
+		}
+
+		.infoBox {
+			margin-top: 10px;
+			margin-bottom: 50px;
+			padding: 0 50px;
+
+			.contactItem {
+				gap: 10px;
+				padding: 10px 0;
+				max-width: 250px;
+
+				.contactText {
+					font-size: 16px;
+					margin: 0;
+				}
+
+				.contactImage {
+					width: 19px;
+					height: 19px;
+				}
+
+				.mailImage {
+					width: 19px;
+					height: 15px;
+				}
+
+				.mapImage {
+					width: 19px;
+					height: 24px;
+				}
+			}
+		}
+
+		.footer {
+			padding: 10px 0 0 0;
+			height: unset;
+			flex-direction: column-reverse;
+
+			.footerItem {
+				padding: 10px 0;
+
+				.footerText {
+					font-size: 10px;
+					line-height: 20px;
+					margin: 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

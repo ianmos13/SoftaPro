@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .videoContainer {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+
+        .videoBox {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            width: 100%;
+            max-width: 1600px;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

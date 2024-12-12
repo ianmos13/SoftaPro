@@ -1,0 +1,146 @@
+.outerContainer {
+	width: 80px;
+	height: 80px;
+	background-color: #fff;
+	padding: 1px;
+	border-radius: 8px;
+	transform-origin: bottom left;
+	transition: width 1s ease-in-out, height 1s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.innerContainer {
+		width: 100%;
+		height: 100%;
+		border-radius: 8px;
+		background-color: #cddee3;
+		transform-origin: bottom left;
+		transition: width 1s ease-in-out, height 1s ease-in-out;
+		padding: 38px 30px 23px 30px;
+	}
+
+	.innerContainer.expanded {
+		clip-path: polygon(0% 0%, 90% 0%, 100% 13%, 100% 100%, 0% 100%);
+	}
+
+	.innerContainer.purpleTheme {
+		background-color: #d4d1dc;
+	}
+
+	.innerContainer.yellowTheme {
+		background-color: #dae3d5;
+	}
+
+	.serviceInformation {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 20px;
+		overflow: hidden;
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+
+		.headerText {
+			font-family: "Tektur";
+			color: #154359;
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 31.2px;
+			margin: 0;
+		}
+
+		.infoText {
+			margin: 0;
+			font-family: "Inter";
+			color: #154359;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 25px;
+		}
+	}
+
+	.serviceInformation.visible {
+		opacity: 1;
+	}
+}
+
+.outerContainer.expanded {
+	width: 426px;
+	height: 314px;
+	clip-path: polygon(0% 0%, 90% 0%, 100% 13%, 100% 100%, 0% 100%);
+}
+
+.outerContainer.expandedEnd {
+	height: 100%;
+}
+
+@media (max-width: 768px) {
+	.outerContainer {
+
+		.innerContainer {
+			background-color: #cddee3;
+			padding: 32px 17px 21px 17px;
+		}
+
+		.innerContainer.expanded {
+		}
+
+		.serviceInformation {
+
+			.headerText {
+				font-size: 20px;
+				line-height: 26px;
+			}
+
+			.infoText {
+				font-size: 12px;
+				line-height: 19px;
+			}
+		}
+	}
+
+	.outerContainer.expanded {
+		height: 200px;
+	}
+
+	.outerContainer.expandedEnd {
+		height: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	.outerContainer {
+
+		.innerContainer {
+			background-color: #cddee3;
+			padding: 32px 17px 21px 17px;
+		}
+
+		.innerContainer.expanded {
+		}
+
+		.serviceInformation {
+		}
+
+		.headerText {
+			font-size: 20px;
+			line-height: 26px;
+		}
+
+		.infoText {
+			font-size: 12px;
+			line-height: 19px;
+		}
+	}
+
+	.outerContainer.expanded {
+		width: 100%;
+		height: 250px;
+	}
+
+	.outerContainer.expandedEnd {
+		height: 100%;
+	}
+}
